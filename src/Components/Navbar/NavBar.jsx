@@ -25,7 +25,7 @@ function NavBar() {
   </Navbar.Collapse>
   </Container>
 </Navbar>
-<h1> e-commerce </h1>
+<h1> e-commerce Rivero </h1>
     </>;
     
     }
