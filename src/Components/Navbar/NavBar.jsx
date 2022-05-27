@@ -17,8 +17,8 @@ function NavBar() {
       <Nav.Link href="#pricing">Niños</Nav.Link>
     </Nav>
     <Nav>
-      <Nav.Link href="#deets">Carrito</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
+      <Nav.Link href="">Carrito</Nav.Link>
+      <Nav.Link eventKey={2} href="">
         Ver mas..
       </Nav.Link>
     </Nav>
