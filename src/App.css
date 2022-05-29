@@ -1,5 +1,7 @@
-h1{
+.gree{
     text-align: center;
-    color: gray;
+    color: rgb(144, 134, 134);
+    margin-top: 50px;
+    padding: 100px;
 }
 

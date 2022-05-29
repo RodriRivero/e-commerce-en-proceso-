@@ -1,11 +1,11 @@
 
 import './Navbar.css';
-
 import { Navbar,Container,Nav } from "react-bootstrap";
+import CarWidget from '../CarWidget/CarWidget';
 
 
 function NavBar() {
-    return <>
+    return( <>
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
   <Navbar.Brand href="#home">React-Rivero</Navbar.Brand>
@@ -17,7 +17,7 @@ function NavBar() {
       <Nav.Link href="#pricing">Niños</Nav.Link>
     </Nav>
     <Nav>
-      <Nav.Link href="">Carrito</Nav.Link>
+      <Nav.Link href=""><CarWidget/></Nav.Link>
       <Nav.Link eventKey={2} href="">
         Ver mas..
       </Nav.Link>
@@ -25,8 +25,7 @@ function NavBar() {
   </Navbar.Collapse>
   </Container>
 </Navbar>
-<h1> e-commerce Rivero </h1>
-    </>;
+    </>);
     
     }
 
