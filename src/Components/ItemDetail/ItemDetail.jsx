@@ -8,8 +8,7 @@ export default function ItemDetail({data}) {
             <img className='detailImage' src={data.image} alt="" />
             <div className='content'>
             <h1>{data.title}</h1>
-            <h1>{data.stock}</h1>
-            <h1>{data.precio}</h1>
+            <h1>{data.price}</h1>
             </div>
         </div>
     </div>

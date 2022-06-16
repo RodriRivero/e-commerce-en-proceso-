@@ -4,7 +4,9 @@ import'./ItemList.css';
 
 const ItemList = ({data = []}) => {
     return (
-        data.map(drink => <Item  key={drink.id} info={drink} /> )
+        data.map(drink => 
+            <Item  key={drink.id} info={drink} /> 
+            )
     );
 }
 
