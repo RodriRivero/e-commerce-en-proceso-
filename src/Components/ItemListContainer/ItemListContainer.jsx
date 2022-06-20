@@ -1,5 +1,5 @@
 import React ,{ useState,useEffect }from "react";
-import ItemCount from "../ItemCount/ItemCount";
+
 import ItemList from "../ItemLIst/ItemList";
 import Title from "../Title/Title";
 import { useParams } from "react-router-dom";
@@ -34,14 +34,10 @@ export const ItemListContainer = ()=>{
     
     },[categoriaId])
 
-    const onAdd = (quantity) =>{
-        alert(`compraste ${quantity} unidades`);
-    }
+    
     return(
         <>
         <Title /> 
-        <h1 className="titulo">Contador carrito</h1> 
-        <h2><ItemCount initial={1} stock={5}  onAdd ={onAdd}/> </h2>
         <ItemList   data={data}/>
         </>
     );
