@@ -4,9 +4,9 @@ import'./ItemList.css';
 
 const ItemList = ({data = []}) => {
     return (
-        data.map(drink => 
-            <Item  key={drink.id} info={drink} /> 
-            )
+        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', margin:'15 px'}}>{
+        data.map(drink => <Item  key={drink.id} info={drink} />)}
+        </div>
     );
 }
 

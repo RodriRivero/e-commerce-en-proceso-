@@ -6,20 +6,19 @@ import { NavLink } from 'react-router-dom';
 
 function NavBar() {
     return( <>
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="/">React-Rivero</Navbar.Brand>
+  <Navbar.Brand href="/">BarOnline</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <NavLink to= '/'> Bebidas </NavLink>
-      <NavLink to= '/categoria/conalcohol'>con alcohol</NavLink>
-      <NavLink to= '/categoria/sinalcohol'>sin alcohol</NavLink>
+      <NavLink to= '/'> <p className='bebidas'>Bebidas </p></NavLink>
+      <NavLink  to= '/categoria/conalcohol'><p className='conalcohol'>con alcohol</p></NavLink>
+      <NavLink to= '/categoria/sinalcohol'><p className='sinalcohol'>sin alcohol</p></NavLink>
     </Nav>
     <Nav>
-      <NavLink to='/cart'><CarWidget/></NavLink>
+      <NavLink to='/cart'> <p className='carrito'><CarWidget/></p></NavLink>
       <Nav.Link eventKey={2} href="">
-        Ver mas..
       </Nav.Link>
     </Nav>
   </Navbar.Collapse>
