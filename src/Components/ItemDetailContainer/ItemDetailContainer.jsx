@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from "react-router-dom"; 
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
-
+import{BeatLoader} from 'react-spinners';
 
 
 export default function ItemDetailContainer() {
@@ -20,6 +20,14 @@ export default function ItemDetailContainer() {
 
 
     return (
- <ItemDetail data={data} />
+        <>
+        <div className="spinnerpadre">
+        {Object.keys(data).length < 1 ?
+        <div className="spinnerhijo">
+        <BeatLoader    color= "blue" />
+        </div>:
+        <ItemDetail data={data} />}
+        </div>
+        </>
     )
 }

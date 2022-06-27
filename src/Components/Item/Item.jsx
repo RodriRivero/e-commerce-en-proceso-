@@ -8,6 +8,7 @@ import { CartContex } from '../../Context/CartContex';
 export default function Item({info}) {
 
   const nombre = useContext(CartContex);
+  
     return (
       <div style={{ display: 'flex' }}>
 <Link to={`/detalle/${info.id}`} className='container' >

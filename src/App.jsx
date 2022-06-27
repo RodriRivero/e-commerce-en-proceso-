@@ -7,12 +7,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Cart from "./Components/Cart/Cart";
 import {BrowserRouter,Routes,Route } from 'react-router-dom';
 import CartProvider from './Context/CartContex';
+import  { Toaster } from "react-hot-toast";
 
 
 
 function App() {
   return(
     <> 
+    <Toaster  position="top-center"/>
     <BrowserRouter>
       <CartProvider> 
       <NavBar/>
@@ -24,6 +26,7 @@ function App() {
       </Routes>
       </CartProvider>
     </BrowserRouter>
+    
     </>
   );
 }

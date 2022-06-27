@@ -1,5 +1,6 @@
 
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext} from 'react';
+import toast, { Toaster } from "react-hot-toast";
 export const CartContex = React.createContext([]);
 
 export const useCartContext = ()=> useContext(CartContex);
@@ -28,7 +29,17 @@ const clearCart =()=> setCart([]);
 
 const isInCart =(id)=>cart.find(product => product.id === id) ? true: false;
 
-const removeItem =(id)=>setCart(cart.filter(product => product.id !== id));
+const removeItem = (id) =>setCart(cart.filter(product => product.id !== id),
+toast.success(`Eliminaste los productos`,{
+    position:"top-right",
+    duration: 4000,
+    style: {
+        borderRadius: '7px',
+        background: '  #e5e8e8 ',
+        color: 'black',  
+    },
+} ));
+
 
     return(
         <CartContex.Provider value={{

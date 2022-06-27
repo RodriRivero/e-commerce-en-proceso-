@@ -15,14 +15,14 @@ export const ItemCount = ({initial, stock, onAdd}) => {
 
 
     return(
-    <div className='contador'>
-        <button disabled= {count<=1} onClick={decrease} className='botonrestar'>-</button>
+    <div className='d-flex col-xl- justify-content-evenly mb-3'>
+        <button disabled= {count<=1} onClick={decrease} className='btn btn-danger'>-</button>
 
         <span className='botoncontador'>{count}</span>
         
-        <button disabled= {count>=5}  onClick={increase} className='botonsumar'>+</button>
+        <button disabled= {count>=5}  onClick={increase} className='btn btn-success'>+</button>
         
-            <button className='buttonAdd'  disabled ={stock<=0}  onClick= {()=> onAdd(count)}><span >Agregar al carrito</span></button>
+            <button className='btn btn-primary'  disabled ={stock<=0}  onClick= {()=> onAdd(count)}><span >Agregar al carrito</span></button>
         
     </div>
     );

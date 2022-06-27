@@ -4,6 +4,8 @@ import ItemList from "../ItemLIst/ItemList";
 import Title from "../Title/Title";
 import { useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs,query, where } from 'firebase/firestore';
+import {BeatLoader} from 'react-spinners';
+import './pineer.css';
 
 
 
@@ -32,8 +34,14 @@ export const ItemListContainer = ()=>{
     
     return(
         <>
-        <Title /> 
-        <ItemList   data={data}/>
+        <div className="spinnerpadre">
+            <Title />
+            {Object.keys(data).length < 1 ?
+                <div className="spinnerhijo">
+                <BeatLoader  color= "blue" />
+                </div>: 
+            <ItemList   data={data}/>}
+        </div>
         </>
     );
 }
