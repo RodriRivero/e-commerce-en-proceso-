@@ -3,14 +3,9 @@ import './ItemListContainer.css';
 import ItemList from "../ItemLIst/ItemList";
 import Title from "../Title/Title";
 import { useParams } from "react-router-dom";
+import { getFirestore, collection, getDocs,query, where } from 'firebase/firestore';
 
-const drink = [
 
-    {id:1, image:"http://www.puroescabio.com.ar/web/image/product.template/49631/image_256", category:"conalcohol" ,title:"Fernet",price:1000},
-    {id:2, image:"https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3080167_f.jpg",category:"sinalcohol" ,title:"Coca",price:250},
-    {id:3, image:"https://grupobonprix.com.ar/wp/wp-content/uploads/2020/05/smirnoff-comun.png" , category:"conalcohol" ,title:"Vodka",price:800},
-    {id:4, image:"https://mauimarket.com.ar/wp-content/uploads/2020/07/baggio-naranja-1-lt-021-d0c6ef4aad80b2f5b615860380310402-640-0.jpg",category:"sinalcohol" ,title:"Jugo",price:200},
-];
 
 
 export const ItemListContainer = ()=>{
@@ -20,16 +15,16 @@ export const ItemListContainer = ()=>{
     const{categoriaId} = useParams();
 
     useEffect(()=>{
-        const getData = new Promise(resolve =>{
-            setTimeout(()=>{
-                resolve(drink);
-            },1000);
-        });
 
+        const querydb= getFirestore();
+        const queryCollection = collection(querydb,'items');
         if (categoriaId){
-            getData.then(res => setData(res.filter(drink => drink.category === categoriaId)));
-        }else{
-            getData.then(res=> setData(res));
+            const queryFilter =query(queryCollection,where('category', '==', categoriaId))
+            getDocs(queryFilter)
+                .then(res => setData(res.docs.map(product => ({id: product.id, ...product.data() }))))
+        } else{
+            getDocs(queryCollection)
+            .then(res => setData(res.docs.map(product => ({id: product.id, ...product.data() }))))
         }
     
     },[categoriaId])

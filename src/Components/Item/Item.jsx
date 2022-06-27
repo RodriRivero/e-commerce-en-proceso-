@@ -15,7 +15,7 @@ export default function Item({info}) {
   <Card.Img variant="top" src={info.image} />
   <Card.Body >
     <Card.Title>{info.title}</Card.Title>
-    <Card.Text>{info.id}</Card.Text>
+    <Card.Text> $ {info.price}</Card.Text>
     <Button variant="secondary">ver mas</Button>
   </Card.Body>
 </Card>
