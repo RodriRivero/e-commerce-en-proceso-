@@ -23,3 +23,6 @@ Sino copiar esta URL y pegarla en el navegador: http://localhost:3000
 Backend
 
 Recordar que tiene un backend realizado con Firebase, por si quieren descargar y correr este proyecto, tienen que generar su backend en firebase sino local con data fake.
+
+![](public/bar1.png)
+![](public/bar2jpg.jpg)
