@@ -1,0 +1,29 @@
+
+.Footer {
+    background-color: #343a40;;
+    height: 110px;
+    grid-area: Footer; 
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    
+}
+ul.social {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+li a img{
+    padding: 0 10px;
+}
+.social li a img:hover{
+    transform: translateY(-3%) scale(1.5);
+    transition: all 1s ;
+}
