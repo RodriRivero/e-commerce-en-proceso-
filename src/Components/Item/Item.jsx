@@ -1,12 +1,10 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import './Item.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
-import { CartContex } from '../../Context/CartContex';
 
 export default function Item({info}) {
 
-  const nombre = useContext(CartContex);
   
     return (
 

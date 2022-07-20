@@ -9,24 +9,6 @@ import './Cart.css';
 function Cart() {
 const{ cart } = useCartContext();
 
-// const order = {
-//   buyer:{
-//     name:'Rodrigo',
-//     email:'Rodrigo@gmail.com',
-//     phone:'1534659856',
-//     adress:'12 de octubre 251'
-//   },
-//   items: cart.map(product => ({id:product.id,title:product.title,price:product.price,quantity:product.quantity})),
-// }
-
-// const handleClick = () =>{
-
-// const db = getFirestore();
-// const ordersColletion = collection(db, 'orders');
-// addDoc(ordersColletion, order)
-// .then(({id}) => console.log(id))
-// }
-
 
 
 if (cart.length === 0) {
