@@ -11,6 +11,7 @@ Tecnologías y librerías:
     Backend con Firebase
 
 Descargar y correr el proyecto
+https://reacts22-2d3c7.firebaseapp.com/ ( opcion desplegada )
 
 Una vez clonado o descargado el proyecto, instalar dependencias:
 npm install
